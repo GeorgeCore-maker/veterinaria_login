@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <title>Veterinaria</title>
+</head>
+
+<body>
+    <!-- Ventana modal para modificar citas -->
+    <div class="modal fade" id="ven_modal_cita" tabindex="-1" aria-labelledby="titulo" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title" id="titulo">Modificar Cita</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <select class="form-select form-select-sm" aria-label=".form-select-sm example" name="Clientes"
+                        id="lst_propietario3">
+                        <option selected>--Nombre del cliente--</option>
+                    </select>
+                    <p class="text-danger fst-italic text-center fs-6" id="txt_prop2" style="display: none;">
+                        Seleccione el propietario</p>
+                    <select class="form-select form-select-sm mt-3" aria-label=".form-select-sm example" name="Mascotas"
+                        id="lst_mascotas2">
+                        <option selected>--Nombre de la mascota--</option>
+                    </select>
+                    <p class="text-danger fst-italic text-center fs-6" id="txt_masc2" style="display: none;">
+                        Seleccione la mascota</p>
+                    <input type="text" class="form-control mt-3" id="txt_sintomas2" placeholder="Sintomas">
+                    <p class="text-danger fst-italic text-center fs-6" id="txt_sint1" style="display: none;">
+                        Escriba los sintomas de la macota</p>
+                    <input type="date" class="form-control mt-3" id="dt_fecha2" placeholder="Fecha">
+                    <p class="text-danger fst-italic text-center fs-6" id="txt_fecha2" style="display: none;">
+                        Seleccione una fecha valida</p>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-danger" id="btn_cambiar_modal_citas"><svg xmlns="http://www.w3.org/2000/svg"
+                            width="16" height="16" fill="currentColor" class="bi bi-folder-symlink-fill"
+                            viewBox="0 0 16 16">
+                            <path
+                                d="M13.81 3H9.828a2 2 0 0 1-1.414-.586l-.828-.828A2 2 0 0 0 6.172 1H2.5a2 2 0 0 0-2 2l.04.87a1.99 1.99 0 0 0-.342 1.311l.637 7A2 2 0 0 0 2.826 14h10.348a2 2 0 0 0 1.991-1.819l.637-7A2 2 0 0 0 13.81 3zM2.19 3c-.24 0-.47.042-.683.12L1.5 2.98a1 1 0 0 1 1-.98h3.672a1 1 0 0 1 .707.293L7.586 3H2.19zm9.608 5.271-3.182 1.97c-.27.166-.616-.036-.616-.372V9.1s-2.571-.3-4 2.4c.571-4.8 3.143-4.8 4-4.8v-.769c0-.336.346-.538.616-.371l3.182 1.969c.27.166.27.576 0 .742z" />
+                        </svg> Cambiar</button>
+                    <button class="btn btn-warning" data-bs-dismiss="modal"><svg xmlns="http://www.w3.org/2000/svg"
+                            width="16" height="16" fill="currentColor" class="bi bi-door-open-fill" viewBox="0 0 16 16">
+                            <path
+                                d="M1.5 15a.5.5 0 0 0 0 1h13a.5.5 0 0 0 0-1H13V2.5A1.5 1.5 0 0 0 11.5 1H11V.5a.5.5 0 0 0-.57-.495l-7 1A.5.5 0 0 0 3 1.5V15H1.5zM11 2h.5a.5.5 0 0 1 .5.5V15h-1V2zm-2.5 8c-.276 0-.5-.448-.5-1s.224-1 .5-1 .5.448.5 1-.224 1-.5 1z" />
+                        </svg> Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Encabezado-->
+    <div class="container">
+        <div class="page-header">
+            <div class="text-start">
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Menú Principal
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <li><a class="dropdown-item" href="personas.html">Personas</a></li>
+                        <li><a class="dropdown-item" href="mascotas.html">Mascotas</a></li>
+                        <li><a class="dropdown-item" href="citas.html">Programar cita</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item disabled" href="nuevo_usuario.html">Crear usuario</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="text-end">
+                <h1 class="fw-bolder fst-italic">Administración de citas</h1>
+                <small class="fw-bold fs-5 text-decoration-underline">Jorge Armando Díaz Alarcón</small>
+                <br>
+                <small class="fw-bold fs-5 text-decoration-underline">Edwin Hernández García</small>
+            </div>
+        </div>
+        <!-- Tarjetas de citas programadas -->
+        <h1 class="fw-bold text-center text-decoration-underline font-monospace text-dark">Clinica veterinaria</h1>
+        <div class="card shadow-lg p-3 mb-5 bg-body rounded border border-3">
+            <div class="card-body">
+                <div class="container">
+                    <h2 class="text-center fw-bold">Citas programadas</h2>
+                    <div class="row row-cols-1 row-cols-md-3 g-4" id="citas_p"></div>
+                </div>
+            </div>
+        </div>
+        <footer class="footer footer-style text-center">
+            <!--Pie de pagina-->
+            <div class="container">
+                <h5>Servicio Nacional de Aprendizaje - SENA</h5>
+                <img class="rounded mx-auto d-block" src="./Imagenes/sena logo_png.jpg">
+                <p class="fs-6 fst-italic">Todos los derechos reservados - 2021</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.17.0/axios.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="app_citasp.js" type="module"></script>
+    <script src="citas.js" type="module"></script>
+</body>
+
+</html>

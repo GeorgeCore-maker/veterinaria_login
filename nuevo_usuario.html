@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <title>Crear nuevo usuario</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="page-header">
+            <div class="text-start">
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Menú Principal
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <li><a class="dropdown-item" href="personas.html">Personas</a></li>
+                        <li><a class="dropdown-item" href="mascotas.html">Mascotas</a></li>
+                        <li><a class="dropdown-item" href="citas.html">Programar cita</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="text-end">
+                <h1 class="fw-bolder fst-italic">Administración de citas</h1>
+                <small class="fw-bold fs-5 text-decoration-underline">Jorge Armando Díaz Alarcón</small>
+                <br>
+                <small class="fw-bold fs-5 text-decoration-underline">Edwin Hernández García</small>
+            </div>
+        </div>
+
+        <div class="card mt-3 shadow-lg p-3 mb-5 bg-body rounded border border-3" id="crear_usuario">
+            <div class="card-header">
+                <h2 class="text-center fw-bold">Crear nuevo usuario</h2>
+            </div>
+            <div class="card-body">
+                <input type="text" class="form-control fs-4 mt-3" id="txt_iduser" placeholder="Id de usuario">
+                <p class="text-danger fst-italic text-center fs-6 bg-light" id="txt_menuser" style="display: none;">
+                    Escriba el id de usuario</p>
+                <input type="text" class="form-control fs-4 mt-3" id="txt_pass1" placeholder="Escriba la contraseña">
+                <p class="text-danger fst-italic text-center fs-6 bg-light" id="txt_menpass1" style="display: none;">
+                    Contraseña invalida, debe tener mas de 6 digitos, una mayuscula y un numero</p>
+                <input type="text" class="form-control fs-4 mt-3" id="txt_pass2" placeholder="Reescriba la contraseña">
+                <p class="text-danger fst-italic text-center fs-6 bg-light" id="txt_menpass2" style="display: none;">
+                    Contraseña no coincide</p>
+                <select class="form-select form-select-lg mt-2" aria-label=".form-select-sm example" id="tipo_usuario" name="tipouser">
+                    <option selected>--Tipo de usuario--</option>
+                    <option value="Admin">Usuario administrador</option>
+                    <option value="Dir">Usuario director</option>
+                    <option value="Normal">Usuario normal</option>
+                </select>
+                <input type="text" class="form-control fs-4 mt-3" id="txt_nomcom" placeholder="Nombre de usuario">
+                <p class="text-danger fst-italic text-center fs-6 bg-light" id="txt_menuser" style="display: none;">
+                    Escriba el Nombre de usuario</p>
+                <input type="text" class="form-control fs-4 mt-3" id="txt_mail" placeholder="Correo de usuario">
+                <p class="text-danger fst-italic text-center fs-6 bg-light" id="txt_menmail" style="display: none;">
+                    Correo invalido</p>
+            </div>
+            <div class="card-footer align-self-center">
+                <button class="btn btn-info mt-3" type="button" id="btn_agregar_user">Agregar usuario</button>
+            </div>
+        </div>
+        <!--Pie de pagina-->
+        <footer class="footer footer-style text-center">
+            <div class="container">
+                <h5>Servicio Nacional de Aprendizaje - SENA</h5>
+                <img class="rounded mx-auto d-block" src="./Imagenes/sena logo_png.jpg">
+                <p class="fs-6 fst-italic">Todos los derechos reservados - 2021</p>
+            </div>
+        </footer>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.17.0/axios.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

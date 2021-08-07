@@ -1,0 +1,68 @@
+{
+  "personas": [
+    {
+      "nombrePersona": "Jorge Armando Diaaz",
+      "tipoDocumento": "CC",
+      "numeroDocumento": "1100955809",
+      "telefono": "3143129003",
+      "direccion": "Calle 13a #21-16 piso 2",
+      "ciudad": "San Gil",
+      "id": 1
+    },
+    {
+      "nombrePersona": "jorgea ugug",
+      "tipoDocumento": "CC",
+      "numeroDocumento": "12345788",
+      "telefono": "234786786",
+      "direccion": "Calle jkg",
+      "ciudad": "San Gil",
+      "id": 2
+    }
+  ],
+  "mascotas": [
+    {
+      "nombreMascota": "vaca",
+      "tipo": "Ave",
+      "raza": "arabe",
+      "propietario": "Jorge Armando Diaaz",
+      "id": 3
+    },
+    {
+      "nombreMascota": "perro",
+      "tipo": "Perro",
+      "raza": "otro",
+      "propietario": "Jorge Armando Diaaz",
+      "id": 4
+    }
+  ],
+  "citas": [
+    {
+      "fecha": "2021-08-05",
+      "nombrePropietario": "Jorge Armando Diaaz",
+      "nombreMascota": "kira",
+      "sintomas": "yfuf",
+      "id": 2
+    },
+    {
+      "fecha": "2021-08-08",
+      "nombrePropietario": "jorgea ugug",
+      "nombreMascota": "tacha",
+      "sintomas": "dolor",
+      "id": 3
+    }
+  ],
+  "usuarios": [
+    {
+      "usuario": "Admin",
+      "pass": "123456",
+      "rol": "admin",
+      "id": 1
+    },
+    {
+      "usuario": "User",
+      "pass": "567890",
+      "rol": "usuario",
+      "id": 2
+    }
+  ]
+}

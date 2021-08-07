@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <title>Citas</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="page-header">
+            <div class="text-start">
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Menú Principal
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <li><a class="dropdown-item" href="personas.html">Personas</a></li>
+                        <li><a class="dropdown-item" href="mascotas.html">Mascotas</a></li>
+                        <li><a class="dropdown-item" href="home.html">Pagina principal</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item disabled" href="nuevo_usuario.html">Crear usuario</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="text-end">
+                <h1 class="fw-bolder fst-italic">Administración de citas</h1>
+                <small class="fw-bold fs-5 text-decoration-underline">Jorge Armando Díaz Alarcón</small>
+                <br>
+                <small class="fw-bold fs-5 text-decoration-underline">Edwin Hernández García</small>
+            </div>
+
+            <div class="card shadow-lg p-3 mb-5 bg-body rounded border border-3" id="crear">
+                <div class="card-header">
+                    <h2 class="text-center fw-bold">Crear nueva cita</h2>
+                </div>
+                <div class="card-body">
+                    <select class="form-select form-select-sm fs-4" aria-label=".form-select-sm example" name="Clientes"
+                        id="lst_propietario">
+                        <option selected>--Nombre del cliente--</option>
+                    </select>
+                    <p class="text-danger fst-italic text-center fs-6 bg-light" id="txt_prop1" style="display: none;">
+                        Seleccione el propietario</p>
+                    <select class="form-select form-select-sm fs-4 mt-3" aria-label=".form-select-sm example"
+                        name="Mascotas" id="lst_mascotas">
+                        <option selected>--Nombre de la mascota--</option>
+                    </select>
+                    <p class="text-danger fst-italic text-center fs-6 bg-light" id="txt_masc" style="display: none;">
+                        Seleccione la mascota</p>
+                    <input type="text" class="form-control fs-4 mt-3" id="txt_sintomas" placeholder="Sintomas">
+                    <p class="text-danger fst-italic text-center fs-6 bg-light" id="txt_sint" style="display: none;">
+                        Escriba los sintomas de la macota</p>
+                    <input type="date" class="form-control fs-4 mt-3" id="dt_fecha" placeholder="Fecha">
+                    <p class="text-danger fst-italic text-center fs-6 bg-light" id="txt_fecha" style="display: none;">
+                        Seleccione una fecha valida</p>
+                </div>
+                <div class="card-footer align-self-center">
+                    <button class="btn btn-info mt-3" type="button" id="btn_agregar_cita">Agregar Cita</button>
+                </div>
+            </div>
+        </div>
+        <!--Pie de pagina-->
+        <footer class="footer footer-style text-center">
+            <div class="container">
+                <h5>Servicio Nacional de Aprendizaje - SENA</h5>
+                <img class="rounded mx-auto d-block" src="./Imagenes/sena logo_png.jpg">
+                <p class="fs-6 fst-italic">Todos los derechos reservados - 2021</p>
+            </div>
+        </footer>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.17.0/axios.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="app_citas.js" type="module"></script>
+</body>
+
+</html>
