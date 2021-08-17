@@ -22,11 +22,11 @@ document.addEventListener('DOMContentLoaded', async function (j) {
                         <div class="card-header bg-light text-end fs-4 fw-bold">${prog.fecha}</div>
                         <div class="card-body">
                             <h4 class="text-decoration-underline text-dark">Propietario:</h4>
-                            <h3 class="fw-bold text-warning fst-italic">${prog.nombrePropietario}</h3>
+                            <h3 class="fw-bold fst-italic">${prog.nombrePropietario}</h3>
                             <h4 class="text-decoration-underline text-dark">Mascota:</h4>
-                            <h3 class="fw-bold text-warning fst-italic">${prog.nombreMascota}</h3>
+                            <h3 class="fw-bold fst-italic">${prog.nombreMascota}</h3>
                             <h4 class="text-decoration-underline text-dark">Enfermedad:</h4>
-                            <h3 class="fw-bold text-warning fst-italic">${prog.sintomas}</h3>
+                            <h3 class="fw-bold fst-italic">${prog.sintomas}</h3>
                         </div>
                         <div class="card-footer  bg-light">
                             <h5 class="fst-italic text-decoration-underline">ID de la cita: ${prog.id}</h5>
@@ -72,12 +72,10 @@ docum2.addEventListener("click", (j) => {
     }
     if (j.target.classList.contains("edit_cita")) {
         id_citas = j.target.dataset.id
-        console.log(j.target.dataset.nom_cli);
         nombre_cam.value = j.target.dataset.nom_cli
         mascota_cam.value = j.target.dataset.nom_mas
         sintomas_cam.value = j.target.dataset.sint
         fecha_cam.value = j.target.dataset.fecha
-
     }
 })
 

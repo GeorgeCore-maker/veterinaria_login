@@ -1,54 +1,50 @@
 {
   "personas": [
     {
-      "nombrePersona": "Jorge Armando Diaaz",
+      "nombrePersona": "Jorge Armando",
       "tipoDocumento": "CC",
-      "numeroDocumento": "1100955809",
+      "numeroDocumento": "123456789",
       "telefono": "3143129003",
       "direccion": "Calle 13a #21-16 piso 2",
       "ciudad": "San Gil",
       "id": 1
     },
     {
-      "nombrePersona": "jorgea ugug",
-      "tipoDocumento": "CC",
-      "numeroDocumento": "12345788",
-      "telefono": "234786786",
-      "direccion": "Calle jkg",
+      "nombrePersona": "Janet Guevara",
+      "tipoDocumento": "CE",
+      "numeroDocumento": "1234567",
+      "telefono": "3177396982",
+      "direccion": "Calle 13a #21-16 piso 2",
       "ciudad": "San Gil",
       "id": 2
     }
   ],
   "mascotas": [
     {
-      "nombreMascota": "vaca",
-      "tipo": "Ave",
-      "raza": "arabe",
-      "propietario": "Jorge Armando Diaaz",
-      "id": 3
+      "nombreMascota": "toby",
+      "tipo": "Gato",
+      "raza": "ssss",
+      "propietario": "Jorge Armando",
+      "rutaImg": "http://127.0.0.1:5500/Imagenes/gato.jpg",
+      "id": 1
     },
     {
-      "nombreMascota": "perro",
-      "tipo": "Perro",
-      "raza": "otro",
-      "propietario": "Jorge Armando Diaaz",
-      "id": 4
+      "nombreMascota": "kkjhb",
+      "tipo": "Roedor",
+      "raza": "ssss",
+      "propietario": "Janet Guevara",
+      "rutaImg": "http://127.0.0.1:5500/Imagenes/roedores.jpg",
+      "id": 2
     }
   ],
   "citas": [
     {
-      "fecha": "2021-08-05",
-      "nombrePropietario": "Jorge Armando Diaaz",
-      "nombreMascota": "kira",
-      "sintomas": "yfuf",
-      "id": 2
-    },
-    {
-      "fecha": "2021-08-08",
-      "nombrePropietario": "jorgea ugug",
-      "nombreMascota": "tacha",
+      "fecha": "2021-08-26",
+      "nombrePropietario": "Jorge Armando",
+      "nombreMascota": "toby",
       "sintomas": "dolor",
-      "id": 3
+      "hora": "09:48",
+      "id": 1
     }
   ],
   "usuarios": [

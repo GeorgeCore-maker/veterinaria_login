@@ -14,28 +14,30 @@
 
 <body>
     <div class="text-center">
-        <a href="#myModal" id="ingresar" class="trigger-btn" data-bs-toggle="modal" data-bs-target="#myModal">Click aqui para ingresar</a>
+        <a href="#myModal" id="ingresar" class="btn btn-lg btn-primary" data-bs-toggle="modal"
+            data-bs-target="#myModal">Click aqui para ingresar</a>
     </div>
 
     <!-- Modal HTML -->
-    <div id="myModal" class="modal fade">
-        <div class="modal-dialog modal-login">
+    <div class="modal fade" id="myModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
-                    <div class="avatar">
-                        <img src="Imagenes/person-circle.svg" alt="Avatar">
+                    <img src="Imagenes/user.png">
+                    <div class="modal-title align-self-center">
+                        <h1>Bienvenido</h1>
                     </div>
-                    <h1 class="modal-title">Bienvenido</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-hidden="true"></button>
                 </div>
                 <div class="modal-body">
-                            <input type="text" class="form-control text-center" id="txt_usuario" name="username" placeholder="Usuario"
-                                required="required">
-                            <input type="password" id="txt_pass" class="form-control text-center mt-3" name="password" placeholder="Contraseña"
-                                required="required">
+                    <input type="text" class="form-control text-center" id="txt_usuario" name="username"
+                        placeholder="Usuario" required>
+                    <input type="password" id="txt_pass" class="form-control text-center mt-3" name="password"
+                        placeholder="Contraseña" required>
                 </div>
-                <div class="modal-footer">
-                        <button type="submit" id="btn_submit" class="btn btn-primary btn-lg btn-block login-btn">Ingresar</button>
+                <div class="modal-footer align-self-center">
+                    <button type="button" id="btn_submit" class="btn btn-primary btn-lg btn-block">Ingresar</button>
                 </div>
             </div>
         </div>

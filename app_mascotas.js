@@ -21,6 +21,7 @@ document.addEventListener('DOMContentLoaded', async function (h) {
                     <td>${mascotas.id} </td>
                     <td>${mascotas.nombreMascota} </td>
                     <td>${mascotas.tipo} </td>
+                    <td><img src="${mascotas.rutaImg}"></img></td>
                     <td>${mascotas.raza} </td>
                     <td>${mascotas.propietario} </td>
                     <td> <button class="btn-warning editar" data-bs-target="#ven_modal_mascota"  data-bs-toggle="modal"
@@ -53,10 +54,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
 let id_mascotas = 0
 let nom_mas_cam = document.getElementById("nombre_mascota")
-let tip_cam = document.getElementById("tipo")
 let raz_cam = document.getElementById("raza")
 let prop_cam = document.getElementById("lst_propietario")
 let titulo_mod_mascotas = document.getElementById("titulo_mod_mascotas")
+
 
 docum.addEventListener("click", (h) => {
 
@@ -111,6 +112,16 @@ btn_cambiar_mascota.addEventListener('click', () => {
 
     let nom_mas_ok, tipo_cam_ok, raza_cam_ok, prop_cam_ok = false
     let tipo_animal = ""
+    let foto_mascota = ""
+    let img_perro=document.getElementById("img_perro")
+    let img_gato=document.getElementById("img_gato")
+    let img_ave=document.getElementById("img_ave")
+    let img_roedor=document.getElementById("img_roedor")
+    let img_oveja=document.getElementById("img_oveja")
+    let img_cerdo=document.getElementById("img_cerdo")
+    let img_caballo=document.getElementById("img_caballo")
+    let img_vaca=document.getElementById("img_vaca")
+    let img_cabra=document.getElementById("img_cabra")
 
     if (nombre_mascota_cam == "") {
         txt_nom_mas.style.display = "block"
@@ -128,6 +139,36 @@ btn_cambiar_mascota.addEventListener('click', () => {
         } else {
             txt_tipo.style.display = "block"
         }
+    }
+
+    switch(tipo_animal){
+        case "Perro":
+            foto_mascota=img_perro.src
+        break
+        case "Gato":
+            foto_mascota=img_gato.src
+        break
+        case "Ave":
+            foto_mascota=img_ave.src
+        break
+        case "Roedor":
+            foto_mascota=img_roedor.src
+        break
+        case "Oveja":
+            foto_mascota=img_oveja.src
+        break
+        case "Cerdo":
+            foto_mascota=img_cerdo.src
+        break
+        case "Caballo":
+            foto_mascota=img_caballo.src
+        break
+        case "Vaca":
+            foto_mascota=img_vaca.src
+        break
+        case "Cabra":
+            foto_mascota=img_cabra.src
+        break
     }
 
     if (raza_cam == "") {

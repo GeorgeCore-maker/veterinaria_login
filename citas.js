@@ -1,13 +1,15 @@
 const url = "http://localhost:3000/citas"
 
-export function guardarCita(fecha, propietario, mascota, sintomas) {
+export function guardarCita(fecha, propietario, mascota, sintomas, hora, imagen) {
     axios.post(`${url}`,
         {
             id: Number,
             fecha: fecha,
             nombrePropietario: propietario,
             nombreMascota: mascota,
-            sintomas: sintomas
+            sintomas: sintomas,
+            hora: hora,
+            imagen: imagen
         }
     )
         .then(response => {
@@ -18,12 +20,14 @@ export function guardarCita(fecha, propietario, mascota, sintomas) {
         })
 }
 
-export function cambiarCita(id, fecha, propietario, mascota, sintomas) {
+export function cambiarCita(id, fecha, propietario, mascota, sintomas, hora, imagen) {
     axios.put(`${url}/${id}`, {
         fecha: fecha,
         nombrePropietario: propietario,
         nombreMascota: mascota,
-        sintomas: sintomas
+        sintomas: sintomas,
+        hora: hora,
+        imagen: imagen
     })
         .then(response => {
             console.log(response)

@@ -25,7 +25,9 @@
                         <li><a class="dropdown-item" href="personas.html">Personas</a></li>
                         <li><a class="dropdown-item" href="mascotas.html">Mascotas</a></li>
                         <li><a class="dropdown-item" href="home.html">Pagina principal</a></li>
-                        <li><hr class="dropdown-divider"></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
                         <li><a class="dropdown-item disabled" href="nuevo_usuario.html">Crear usuario</a></li>
                     </ul>
                 </div>
@@ -60,6 +62,9 @@
                     <input type="date" class="form-control fs-4 mt-3" id="dt_fecha" placeholder="Fecha">
                     <p class="text-danger fst-italic text-center fs-6 bg-light" id="txt_fecha" style="display: none;">
                         Seleccione una fecha valida</p>
+                    <input type="time" class="form-control fs-4 mt-3" id="tm_hora" placeholder="Hora">
+                    <p class="text-danger fst-italic text-center fs-6 bg-light" id="txt_hora" style="display: none;">
+                        Seleccione una hora valida, entre 8 am y 6 pm</p>
                 </div>
                 <div class="card-footer align-self-center">
                     <button class="btn btn-info mt-3" type="button" id="btn_agregar_cita">Agregar Cita</button>
